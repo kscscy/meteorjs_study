@@ -1,0 +1,12 @@
+<head>
+  <title>Address Book</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <div class="well">{{> loginButtons}}</div>
+  {{#if currentUser}}
+    {{> addressInput}}
+    {{> addressList}}
+  {{/if}}
+</body>

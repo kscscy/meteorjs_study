@@ -1,0 +1,30 @@
+<head>
+  <title>waggleChat!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+  <h1>Welcome to waggleChat!</h1>
+  <!-- {{> chatMain}} -->
+  {{> Template.dynamic template=currentMode}}
+</body>
+
+<template name="chatMain">
+  <div class="container">
+    <!-- loginButtons -->
+    <p>{{> loginButtons}}</p>
+    <!-- createRoom -->
+    <p>{{> createRoom}}</p>
+    <!-- roomList -->
+    <p>{{> roomList}}</p>
+  </div>
+</template>
+
+<template name="chatRoom">
+  <div class="panel">
+    <!--채팅방입니다. 이 메시지는 잠시 후에 삭제.-->
+    {{> roomHeader}}
+    {{> messageList}}
+    {{> messageInput}}
+  </div>
+</template>
